@@ -1,16 +1,73 @@
-# Проект по автоматизации тестовых сценариев для мобильного приложения HABITS
-## :scroll: Содержание:
+# Проект автоматизации тестирования для мобильного приложения [uHabits](https://github.com/iSoron/uhabits)
 
-- [Используемый стек](#computer-используемый-стек)
-- [Запуск автотестов](#arrow_forward-запуск-автотестов)
-- [Примеры автоматизированных тестов](#пример-тест-кейсов)
-- [Сборка в Jenkins](#-сборка-в-jenkins)
-- [Пример Allure-отчета](#-пример-allure-отчета)
-- [Результат успешного прогона](#-результат-успешного-прогона)
-- [Уведомления в Telegram](#-уведомления-в-telegram-с-использованием-бота)
-- [Видео примера запуска тестов в Browserstack](#-видео-пример-запуска-тестов-в-Browserstack)
+<p align="center">
+  <img src="src/images/screensApk/1.png" width="150" />
+  <img src="src/images/screensApk/2.png" width="150" />
+  <img src="src/images/screensApk/3.png" width="150" />
+</p>
+<p align="center">
+  <img src="src/images/screensApk/4.png" width="150" />
+  <img src="src/images/screensApk/5.png" width="150" />
+  <img src="src/images/screensApk/6.png" width="150" />
+</p>
 
-## :computer: Используемый стек
+## **Содержание:** ##
+
+* <a href="#description">Описание</a>
+
+* <a href="#tools">Технологии и инструменты</a>
+
+* <a href="#cases">Пример проверок по автоматизации</a>
+
+* <a href="#jenkins">Сборка в Jenkins</a>
+
+* <a href="#console">Локальный запуск</a>
+
+* <a href="#allure">Allure отчет</a>
+
+* <a href="#testops">Интеграция с Allure TestOps</a>
+
+* <a href="#jira">Интеграция с Jira</a>
+
+* <a href="#telegram">Отправка результатов в Telegram-бота</a>
+
+-----
+<a id="description"></a>
+## <a name="Описание">**Описание:**</a>
+
+
+**🧙️[uHabits](https://github.com/iSoron/uhabits)** — это мобильное приложение с открытым исходным кодом, предназначенное для создания и поддержания полезных привычек, помогая пользователям достигать долгосрочных целей.
+
+- **Простой и минималистичный интерфейс**: uHabits предлагает элегантный и понятный интерфейс, удобный даже для новичков.
+
+- **Гибкие расписания**: приложение поддерживает привычки с различной периодичностью, например, 3 раза в неделю или через день.
+
+- **Напоминания**: возможность настраивать уведомления для каждой привычки в выбранное время дня.
+
+- **Виджеты**: цветные виджеты позволяют отслеживать привычки прямо с главного экрана без необходимости открывать приложение.
+
+- **Экспорт данных**: поддержка экспорта данных в CSV или SQLite для дальнейшего анализа или переноса в другие сервисы.
+
+- **Полностью бесплатное и без рекламы**: приложение не содержит рекламы и не требует покупок внутри приложения.
+
+- **Работает офлайн и уважает вашу конфиденциальность**: uHabits не требует подключения к интернету и не отправляет ваши данные третьим лицам.
+
+- **Простой и минималистичный интерфейс**: uHabits предлагает элегантный и понятный интерфейс, удобный даже для новичков.
+
+- **Гибкие расписания**: приложение поддерживает привычки с различной периодичностью, например, 3 раза в неделю или через день.
+
+- **Напоминания**: возможность настраивать уведомления для каждой привычки в выбранное время дня.
+
+- **Виджеты**: цветные виджеты позволяют отслеживать привычки прямо с главного экрана без необходимости открывать приложение.
+
+- **Экспорт данных**: поддержка экспорта данных в CSV или SQLite для дальнейшего анализа или переноса в другие сервисы. 
+
+- **Полностью бесплатное и без рекламы**: приложение не содержит рекламы и не требует покупок внутри приложения.
+
+- **Работает офлайн и уважает вашу конфиденциальность**: uHabits не требует подключения к интернету и не отправляет ваши данные третьим лицам.
+
+<a id="tools"></a>
+## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/" target="_blank">
@@ -63,27 +120,9 @@
 * Для удалённого запуска был настроен Jenkins job с генерацией отчёта Allure и отправкой результатов в Telegram через бота.
 * Установлена интеграция с Allure TestOps и Jira.
 
-## :arrow_forward: Запуск автотестов
-
-### Запуск тестов из терминала
-```
-./gradlew clean test -DdeviceHost=remote
-```
-При выполнении данной команды в терминале IDE тесты запустятся удаленно в <code>Browserstack</code>.
-
-<code>clean</code> — удаляет каталог build/ в проекте (все скомпилированные классы, отчёты, кэш тестов, временные файлы);
-
-<code>test</code> — запускает задачу тестирования Gradle, которая:
-
-- компилирует тесты и основной код;
-- запускает тесты (JUnit, TestNG и т.д.);
-- формирует отчёты (например, `build/reports/tests/test/index.html`).
-
-<code>-DdeviceHost</code> — принимает значения local/remote, запускает задачу тестирования Gradle. 
-При значении <code>remote</code> тесты запускаются удаленно в Browserstack; 
-при <code>local</code> - на локально запущенном устройстве из Android Studio.
-
-## Пример тест-кейсов
+----
+<a id="cases"></a>
+## **Примеры автоматизированных тест-кейсов**
 
 ### Создание привычек
 
@@ -98,37 +137,77 @@
 
 - ✅ Удалить привычку
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="src/images/logo/Jenkins.svg"> Сборка в Jenkins
-[Сборка в Jenkins](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/)
-<p align="center">
-    <img title="Jenkins Build" src="src/images/screenshot/jenkinsBuild.png">
+----
+<a id="jenkins"></a>
+## Сборка в Jenkins ([link](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/))
+<p align="center">  
+<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/"><img src="src/images/screenshot/jenkins_report.png" alt="Jenkins" width="950"/></a>  
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="src/images/logo/Allure.png"> Пример Allure-отчета
-### Overview
-[Allure  отчет](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-qa_guru-booking/1/allure/)
-<p align="center">
-    <img title="Allure Overview" src="src/images/screenshot/Allure_Report.png">
+----
+<a id="console"></a>
+## Запуск из терминала
+
+**Локальный запуск**
+```bash  
+gradle clean test -DdeviceHost=local
+```
+
+**Удаленный запуск из Jenkins**
+```bash
+clean test -DdeviceHost=remote
+```
+
+----
+<a id="allure"></a>
+## Allure отчет ([link](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/))
+
+**Страница отчета**
+<p align="center">  
+<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/"><img src="src/images/screenshot/allure_report_main.png" alt="Allure Report main" width="950"/></a>  
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="src/images/logo/Allure.png"> Результат успешного прогона
-### Overview
-
-<p align="center">
-<img title="Allure Overview" src="src/images/screenshot/ResultsTest.png">
+**Тест-кейсы**
+<p align="center">  
+<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/"><img src="src/images/screenshot/allure_report_cases.png" alt="Allure Report testcases" width="950"/></a>  
 </p>
 
-### <img width="4%" style="vertical-align:middle" title="Telegram" src="src/images/logo/Telegram.png"> Уведомления в Telegram с использованием бота
 
-После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
-
-<p align="center">
-<img width="70%" title="Telegram Notifications" src="src/images/screenshot/TelegramNotifications.png">
+----
+<a id="testops"></a>
+## Интеграция Allure TestOps ([link](https://allure.autotests.cloud/project/4950/dashboards))
+<p align="center">  
+<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="src/images/screenshot/allure_testops_main.png" alt="Allure TestOps" width="950"/></a>  
 </p>
 
-### <img width="4%" style="vertical-align:middle" title="Selenoid" src="src/images/logo/browser-stack.png"> Видео пример запуска тестов в Browserstack
-
-К каждому тесту в отчете прилагается видео прогона.
-<p align="center">
-  <img title="Selenoid Video" src="src/images/screenshot/videoExample.gif">
+**Автоматизированные тест-кейсы**
+<p align="center">  
+<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="src/images/screenshot/allure_testops_auto.png" alt="Allure TestOps" width="950"/></a>  
 </p>
+
+**Ручные тест-кейсы**
+<p align="center">  
+<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="src/images/screenshot/allure_testops_manual.png" alt="Allure TestOps" width="950"/></a>  
+</p>
+
+----
+<a id="jira"></a>
+## Интеграция с Jira ([link](https://jira.autotests.cloud/browse/HOMEWORK-1510))
+<p align="center">  
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-1504"><img src="src/images/screenshot/jira_task.png" alt="Jira" width="950"/></a>  
+</p>
+
+----
+<a id="telegram"></a>
+## Отправка результатов в Telegram-бота
+<p align="center">  
+<img src="src/images/screenshot/tg_bot_report.png" width="350"/> 
+</p>
+
+----
+<a id="telegram"></a>
+## Видео пример запуска тестов в Browserstack
+<p align="center">  
+<img title="BrowserStack Video" src="src/images/screenshot/example_case.gif"/> 
+</p>
+
