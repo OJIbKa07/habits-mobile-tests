@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "Habits APK",
+    "environment": "TFI",
+    "comment": "Everyday task",
+    "reportLink": "https://jenkins.autotests.cloud/job/c36-oPalushina-habits_mobile_tests/1/",
+    "language": "ru",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "8449859667:AAEefnUa6qxxqzBc8IE7wvxxgEjkmRTEQAQ",
+    "chat": "-1002527334715",
+    "replyTo": "@Ogr1407"
+  }
+}
