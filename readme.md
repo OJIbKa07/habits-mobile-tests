@@ -30,6 +30,8 @@
 * <a href="#jira">Интеграция с Jira</a>
 
 * <a href="#telegram">Отправка результатов в Telegram-бота</a>
+* 
+* <a href="#video">Видео пример запуска тестов в Browserstack</a>
 
 -----
 <a id="description"></a>
@@ -205,7 +207,7 @@ clean test -DdeviceHost=remote
 </p>
 
 ----
-<a id="telegram"></a>
+<a id="video"></a>
 ## Видео пример запуска тестов в Browserstack
 <p align="center">  
 <img title="BrowserStack Video" src="src/images/screenshot/example_case.gif"/> 
