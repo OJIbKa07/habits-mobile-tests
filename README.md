@@ -1,17 +1,17 @@
 # Проект автоматизации тестирования для мобильного приложения [uHabits](https://github.com/iSoron/uhabits)
 
 <p align="center">
-  <img src="src/images/screensApk/1.png" width="150" />
-  <img src="src/images/screensApk/2.png" width="150" />
-  <img src="src/images/screensApk/3.png" width="150" />
+  <img src="images/screensApk/1.png" width="150" />
+  <img src="images/screensApk/2.png" width="150" />
+  <img src="images/screensApk/3.png" width="150" />
 </p>
 <p align="center">
-  <img src="src/images/screensApk/4.png" width="150" />
-  <img src="src/images/screensApk/5.png" width="150" />
-  <img src="src/images/screensApk/6.png" width="150" />
+  <img src="images/screensApk/4.png" width="150" />
+  <img src="images/screensApk/5.png" width="150" />
+  <img src="images/screensApk/6.png" width="150" />
 </p>
 
-## **Содержание:** ##
+<h2 id="содержание">📜 Содержание:</h2>
 
 * <a href="#description">Описание</a>
 
@@ -68,48 +68,50 @@
 
 - **Работает офлайн и уважает вашу конфиденциальность**: uHabits не требует подключения к интернету и не отправляет ваши данные третьим лицам.
 
+[Вернуться к оглавлению⬆️](#содержание)
+
 <a id="tools"></a>
 ## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/" target="_blank">
-    <img width="6%" title="IntelliJ IDEA" src="src/images/logo/Intelij_IDEA.svg">
+    <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
 </a>
 <a href="https://www.java.com/" target="_blank">
-    <img width="6%" title="Java" src="src/images/logo/Java.svg">
+    <img width="6%" title="Java" src="images/logo/Java.svg">
 </a>
 <a href="https://selenide.org/" target="_blank">
-    <img width="5%" title="Selenide" src="src/images/logo/Selenide.png">
+    <img width="5%" title="Selenide" src="images/logo/Selenide.png">
 </a>
 <a href="https://developer.android.com/" target="_blank">
-    <img width="6%" title="Android Studio" src="src/images/logo/androidstudio.svg">
+    <img width="6%" title="Android Studio" src="images/logo/androidstudio.svg">
 </a>
 <a href="https://github.com/appium/appium-inspector" target="_blank">
-    <img width="6%" title="Appium Inspector" src="src/images/logo/appium_inspector.png">
+    <img width="6%" title="Appium Inspector" src="images/logo/appium_inspector.png">
 </a>
 <a href="https://appium.io/" target="_blank">
-    <img width="6%" title="Appium" src="src/images/logo/Appium.svg">
+    <img width="6%" title="Appium" src="images/logo/Appium.svg">
 </a>
 <a href="https://www.browserstack.com/" target="_blank">
-    <img width="6%" title="Browser Stack" src="src/images/logo/browser-stack.png">
+    <img width="6%" title="Browser Stack" src="images/logo/browser-stack.png">
 </a>
 <a href="https://allurereport.org/" target="_blank">
-    <img width="6%" title="Allure Report" src="src/images/logo/Allure.png">
+    <img width="6%" title="Allure Report" src="images/logo/Allure.png">
 </a>
 <a href="https://gradle.org/" target="_blank">
-    <img width="6%" title="Gradle" src="src/images/logo/Gradle.svg">
+    <img width="6%" title="Gradle" src="images/logo/Gradle.svg">
 </a>
 <a href="https://junit.org/junit5/" target="_blank">
-    <img width="6%" title="JUnit5" src="src/images/logo/JUnit5.svg">
+    <img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
 </a>
 <a href="https://github.com/" target="_blank">
-    <img width="6%" title="GitHub" src="src/images/logo/Github.svg">
+    <img width="6%" title="GitHub" src="images/logo/Github.svg">
 </a>
 <a href="https://www.jenkins.io/" target="_blank">
-    <img width="6%" title="Jenkins" src="src/images/logo/Jenkins.svg">
+    <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 </a>
 <a href="https://telegram.org/" target="_blank">
-    <img width="6%" title="Telegram" src="src/images/logo/Telegram.png">
+    <img width="6%" title="Telegram" src="images/logo/Telegram.png">
 </a>
 </p>
 
@@ -121,6 +123,8 @@
 * Для взаимодействия с API BrowserStack использовался Rest-assured.
 * Для удалённого запуска был настроен Jenkins job с генерацией отчёта Allure и отправкой результатов в Telegram через бота.
 * Установлена интеграция с Allure TestOps и Jira.
+
+[Вернуться к оглавлению⬆️](#содержание)
 
 ----
 <a id="cases"></a>
@@ -139,12 +143,28 @@
 
 - ✅ Удалить привычку
 
+[Вернуться к оглавлению⬆️](#содержание)
+
 ----
 <a id="jenkins"></a>
 ## Сборка в Jenkins ([link](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/))
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/"><img src="src/images/screenshot/jenkins_report.png" alt="Jenkins" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/"><img src="images/screenshot/jenkins_report.png" alt="Jenkins" width="950"/></a>  
 </p>
+
+### Параметры запуска Jenkins
+
+```bash  
+clean test -DdeviceHost=remote -Duser=${BROWSERSTACK_USER} -Dkey=${BROWSERSTACK_KEY} -DremoteUrl=${REMOTE_URL} -DappName=${APP_NAME} "-Ddevice=${DEVICE_NAME}" -DosVersion=${OS_VERSION}
+```
+
+где 
+- <code>user</code> - юзернейм пользователя из личного кабинета Browserstack;
+- <code>key</code> - ключ пользователя из личного кабинета Browserstack;
+- <code>remoteUrl</code> - удаленный адрес Browserstack;
+- <code>appName</code> - идентификатор загруженного приложения из Browserstack;
+- <code>device</code> - название мобильного девайса из Browserstack;
+- <code>osVersion</code> - версия мобильного девайса из Browserstack.
 
 ----
 <a id="console"></a>
@@ -154,62 +174,71 @@
 ```bash  
 gradle clean test -DdeviceHost=local
 ```
+При локальном запуске тесты запускаются на открытом устройстве в Android Studio, используются параметры из файлов connection.properties и device.properties;
+при удаленном - из файлов android.properties и user.properties.
 
-**Удаленный запуск из Jenkins**
-```bash
-clean test -DdeviceHost=remote
-```
+[Вернуться к оглавлению⬆️](#содержание)
 
 ----
 <a id="allure"></a>
-## Allure отчет ([link](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/))
+## Allure отчет ([link](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/5/))
 
 **Страница отчета**
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/"><img src="src/images/screenshot/allure_report_main.png" alt="Allure Report main" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/"><img src="images/screenshot/allure_report_main.png" alt="Allure Report main" width="950"/></a>  
 </p>
 
 **Тест-кейсы**
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/"><img src="src/images/screenshot/allure_report_cases.png" alt="Allure Report testcases" width="950"/></a>  
+<a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/1/allure/"><img src="images/screenshot/allure_report_cases.png" alt="Allure Report testcases" width="950"/></a>  
 </p>
 
+[Вернуться к оглавлению⬆️](#содержание)
 
 ----
 <a id="testops"></a>
 ## Интеграция Allure TestOps ([link](https://allure.autotests.cloud/project/4950/dashboards))
 <p align="center">  
-<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="src/images/screenshot/allure_testops_main.png" alt="Allure TestOps" width="950"/></a>  
+<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="images/screenshot/allure_testops_main.png" alt="Allure TestOps" width="950"/></a>  
 </p>
 
 **Автоматизированные тест-кейсы**
 <p align="center">  
-<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="src/images/screenshot/allure_testops_auto.png" alt="Allure TestOps" width="950"/></a>  
+<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="images/screenshot/allure_testops_auto.png" alt="Allure TestOps" width="950"/></a>  
 </p>
 
 **Ручные тест-кейсы**
 <p align="center">  
-<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="src/images/screenshot/allure_testops_manual.png" alt="Allure TestOps" width="950"/></a>  
+<a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="images/screenshot/allure_testops_manual.png" alt="Allure TestOps" width="950"/></a>  
 </p>
+
+[Вернуться к оглавлению⬆️](#содержание)
 
 ----
 <a id="jira"></a>
 ## Интеграция с Jira ([link](https://jira.autotests.cloud/browse/HOMEWORK-1510))
 <p align="center">  
-<a href="https://jira.autotests.cloud/browse/HOMEWORK-1504"><img src="src/images/screenshot/jira_task.png" alt="Jira" width="950"/></a>  
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-1504"><img src="images/screenshot/jira_task.png" alt="Jira" width="950"/></a>  
 </p>
+
+[Вернуться к оглавлению⬆️](#содержание)
 
 ----
 <a id="telegram"></a>
 ## Отправка результатов в Telegram-бота
 <p align="center">  
-<img src="src/images/screenshot/tg_bot_report.png" width="350"/> 
+<img src="images/screenshot/tg_bot_report.png" width="350"/> 
 </p>
+
+[Вернуться к оглавлению⬆️](#содержание)
 
 ----
 <a id="video"></a>
 ## Видео пример запуска тестов в Browserstack
 <p align="center">  
-<img title="BrowserStack Video" src="src/images/screenshot/example_case.gif"/> 
+<img title="BrowserStack Video" src="images/screenshot/example_case.gif"/> 
 </p>
+
+[Вернуться к оглавлению⬆️](#содержание) 
+
 

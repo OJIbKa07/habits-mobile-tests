@@ -1,5 +1,7 @@
 package tests;
 
+import helpers.allure.annotations.Layer;
+import helpers.allure.annotations.Microservice;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -14,9 +16,14 @@ import utils.RandomUtils;
 
 import java.util.List;
 
+@Owner("oPalushina")
+@Layer("mobile")
+@Microservice("Habits")
+@Tag("mobile")
 @Epic("Поток работы с привычками")
-@Feature("Тесты создания привычек")
+@Feature("Создание привычек (Mobile UI)")
 @Story("Сценарии создания новых привычек")
+@DisplayName("Mobile UI: Тесты создания привычек")
 public class CreateHabitsTests extends TestBase {
     WelcomeScreen welcomeScreen = new WelcomeScreen();
     HabitsScreen habitsScreen = new HabitsScreen();
@@ -29,9 +36,10 @@ public class CreateHabitsTests extends TestBase {
 
     @Tags({@Tag("createHabits"), @Tag("smoke")})
     @Test
-    @DisplayName("Тест создания привычки Да/Нет")
+    @DisplayName("Mobile UI: Создание привычки типа Да/Нет")
     @Owner("oPalushina")
     @Severity(SeverityLevel.BLOCKER)
+    @Description("Проверяет создание бинарной привычки (Да/Нет): ввод имени, вопроса, заметки, выбор цвета и частоты, сохранение и проверка созданной карточки")
     void createYesOrNoHabitTest() {
         nameHabit = faker.getNameHabit();
         questionHabit = faker.getQuestionHabit();
@@ -65,9 +73,10 @@ public class CreateHabitsTests extends TestBase {
 
     @Tags({@Tag("createHabits"), @Tag("smoke")})
     @Test
-    @DisplayName("Тест создания измеримой привычки")
+    @DisplayName("Mobile UI: Создание измеримой привычки")
     @Owner("oPalushina")
     @Severity(SeverityLevel.CRITICAL)
+    @Description("Создание привычки с измеримым значением: ввод имени, вопроса, таргета, единицы измерения, напоминаний, сохранение и проверка всех данных на карточке привычки")
     void createMeasurableHabitTest() {
         nameHabit = faker.getNameHabit();
         questionHabit = faker.getQuestionHabit();
