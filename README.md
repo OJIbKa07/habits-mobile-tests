@@ -215,15 +215,6 @@ gradle clean test -DdeviceHost=local
 [Вернуться к оглавлению⬆️](#содержание)
 
 ----
-<a id="jira"></a>
-## Интеграция с Jira ([link](https://jira.autotests.cloud/browse/HOMEWORK-1510))
-<p align="center">  
-<a href="https://jira.autotests.cloud/browse/HOMEWORK-1504"><img src="images/screenshot/jira_task.png" alt="Jira" width="950"/></a>  
-</p>
-
-[Вернуться к оглавлению⬆️](#содержание)
-
-----
 <a id="telegram"></a>
 ## Отправка результатов в Telegram-бота
 <p align="center">  
