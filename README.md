@@ -30,7 +30,7 @@
 * <a href="#jira">Интеграция с Jira</a>
 
 * <a href="#telegram">Отправка результатов в Telegram-бота</a>
-* 
+
 * <a href="#video">Видео пример запуска тестов в Browserstack</a>
 
 -----
