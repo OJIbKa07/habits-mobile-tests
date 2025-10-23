@@ -147,7 +147,7 @@
 
 ----
 <a id="jenkins"></a>
-## Сборка в Jenkins ([link](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/))
+## [Сборка в Jenkins](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/)
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/"><img src="images/screenshot/jenkins_report.png" alt="Jenkins" width="950"/></a>  
 </p>
@@ -181,7 +181,7 @@ gradle clean test -DdeviceHost=local
 
 ----
 <a id="allure"></a>
-## Allure отчет ([link](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/5/))
+## [Allure отчет](https://jenkins.autotests.cloud/view/QA.GURU%20students/job/c36-oPalushina-habits_mobile_tests/5/)
 
 **Страница отчета**
 <p align="center">  
@@ -197,7 +197,7 @@ gradle clean test -DdeviceHost=local
 
 ----
 <a id="testops"></a>
-## Интеграция Allure TestOps ([link](https://allure.autotests.cloud/project/4950/dashboards))
+## [Интеграция Allure TestOps](https://allure.autotests.cloud/project/4950/dashboards)
 <p align="center">  
 <a href="https://allure.autotests.cloud/project/4932/dashboards"><img src="images/screenshot/allure_testops_main.png" alt="Allure TestOps" width="950"/></a>  
 </p>
