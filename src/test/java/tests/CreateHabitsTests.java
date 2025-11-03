@@ -11,7 +11,6 @@ import screens.NewHabitScreen;
 import screens.CreatedHabitScreen;
 import screens.HabitsScreen;
 import screens.WelcomeScreen;
-import test_data.DefaultValue;
 import utils.RandomUtils;
 
 import java.util.List;
@@ -33,6 +32,7 @@ public class CreateHabitsTests extends TestBase {
     String nameHabit, questionHabit, unitHabit, targetNumber, notesHabit, frequencyHabit,
     targetType;
     List<String> weekDays;
+    String defaultFrequency;
 
     @Tags({@Tag("createHabits"), @Tag("smoke")})
     @Test
@@ -41,6 +41,8 @@ public class CreateHabitsTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Description("Проверяет создание бинарной привычки (Да/Нет): ввод имени, вопроса, заметки, выбор цвета и частоты, сохранение и проверка созданной карточки")
     void createYesOrNoHabitTest() {
+        defaultFrequency = "Every 3 days";
+
         nameHabit = faker.getNameHabit();
         questionHabit = faker.getQuestionHabit();
         notesHabit = faker.getNotesHabit();
@@ -68,7 +70,7 @@ public class CreateHabitsTests extends TestBase {
                 .checkNameHabit(nameHabit)
                 .checkQuestionHabit(questionHabit)
                 .checkNotesHabit(notesHabit)
-                .checkFrequencyHabit(DefaultValue.defaultFrequency);
+                .checkFrequencyHabit(defaultFrequency);
     }
 
     @Tags({@Tag("createHabits"), @Tag("smoke")})
